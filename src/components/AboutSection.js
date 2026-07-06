@@ -9,6 +9,21 @@ export default function AboutSection() {
     <section id="about" className="section-container">
       <div className="container">
         
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="section-header-top"
+        >
+          <div className="badge">Our Story</div>
+          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, marginBottom: "1rem" }}>
+            Democratizing <span className="text-gradient">Enterprise Software.</span>
+          </h2>
+          <p style={{ color: "var(--text-muted)", fontSize: "1.1rem", maxWidth: "800px", margin: "0 auto", lineHeight: "1.6" }}>
+            Oryol Technologies was founded with a single vision: to democratize premium, enterprise-grade software for institutions of all sizes. We believe that whether you run a single school or a global hotel chain, you deserve access to world-class tools.
+          </p>
+        </motion.div>
+
         <div className="about-grid-main">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
@@ -17,11 +32,12 @@ export default function AboutSection() {
             className="about-image-wrapper"
           >
             <Image 
-              src="/images/about_dashboard.png" 
+              src="/images/1000173938-removebg-preview.png" 
               alt="Oryol Cloud Infrastructure" 
               width={600} 
               height={600} 
               className="about-image"
+              style={{ width: "100%", height: "auto" }}
             />
             <div className="image-overlay"></div>
           </motion.div>
@@ -32,14 +48,6 @@ export default function AboutSection() {
             viewport={{ once: true, margin: "-100px" }}
             className="about-text-content"
           >
-            <div className="badge">Our Story</div>
-            <h2 style={{ fontSize: "2.5rem", fontWeight: 700, marginBottom: "1.5rem" }}>
-              Democratizing <span className="text-gradient">Enterprise Software.</span>
-            </h2>
-            <p style={{ color: "var(--text-muted)", fontSize: "1.1rem", marginBottom: "2rem", lineHeight: 1.7 }}>
-              Oryol Technologies was founded with a single vision: to democratize premium, enterprise-grade software for institutions of all sizes. We believe that whether you run a single school or a global hotel chain, you deserve access to world-class tools.
-            </p>
-            
             <div className="features-list">
               <div className="feature-item">
                 <Target color="var(--primary)" size={24} />
@@ -82,6 +90,14 @@ export default function AboutSection() {
           align-items: center;
         }
 
+        .section-header-top {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 5rem;
+        }
+
         .badge {
           display: inline-block;
           background: rgba(59, 130, 246, 0.1);
@@ -96,10 +112,6 @@ export default function AboutSection() {
 
         .about-image-wrapper {
           position: relative;
-          border-radius: 24px;
-          overflow: hidden;
-          box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
-          border: 1px solid var(--glass-border);
         }
 
         .about-image {
@@ -116,7 +128,7 @@ export default function AboutSection() {
         .image-overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(to top right, rgba(15, 23, 42, 0.8), transparent);
+          background: linear-gradient(to top right, var(--bg-alpha-light), transparent);
           pointer-events: none;
         }
 

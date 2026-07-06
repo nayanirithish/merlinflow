@@ -40,10 +40,10 @@ export default function SecuritySection() {
             viewport={{ once: true, margin: "-100px" }}
             className="image-column"
           >
-            <div style={{ borderRadius: "24px", overflow: "hidden", border: "1px solid var(--glass-border)", boxShadow: "var(--neon-glow)", maxWidth: "400px", margin: "0 auto" }}>
+            <div style={{ maxWidth: "400px", margin: "0 auto" }}>
               <Image 
-                src="/images/neon_security.png" 
-                alt="Neon Cyber Security Shield" 
+                src="/images/1000173929-removebg-preview.png" 
+                alt="Corporate Security Shield" 
                 width={500} 
                 height={500} 
                 style={{ width: "100%", height: "auto", display: "block" }} 
@@ -97,14 +97,14 @@ export default function SecuritySection() {
 
         .badge {
           display: inline-block;
-          background: rgba(0, 240, 255, 0.1);
+          background: var(--bg-alpha-light);
           color: var(--primary);
           padding: 0.5rem 1.5rem;
           border-radius: 50px;
           font-weight: 600;
           letter-spacing: 1px;
           margin-bottom: 1.5rem;
-          border: 1px solid rgba(0, 240, 255, 0.2);
+          border: 1px solid var(--glass-border);
         }
 
         .text-gradient {
@@ -127,7 +127,7 @@ export default function SecuritySection() {
 
         .sec-icon {
           color: var(--primary);
-          background: rgba(0, 240, 255, 0.1);
+          background: var(--bg-alpha-light);
           padding: 1rem;
           border-radius: 12px;
           display: flex;
@@ -150,7 +150,7 @@ export default function SecuritySection() {
 
         .primary-btn {
           background: var(--primary);
-          color: #000000;
+          color: #ffffff;
           padding: 1rem 2rem;
           border-radius: 50px;
           font-weight: 700;

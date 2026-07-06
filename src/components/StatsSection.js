@@ -108,7 +108,7 @@ export default function StatsSection() {
         .stat-number {
           font-size: 3rem;
           font-weight: 800;
-          color: white;
+          color: var(--text-color);
           line-height: 1;
           margin-bottom: 0.5rem;
           display: flex;

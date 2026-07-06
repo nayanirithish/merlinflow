@@ -21,9 +21,9 @@ export default function TeamSection() {
       socials: { linkedin: "#", twitter: "#" }
     },
     {
-      name: "Pavan Kumar",
+      name: "Y Pavan Kumar",
       role: "Chief Operating Officer",
-      image: "/team/pavan.jpg",
+      image: "/team/pavan.jpg?v=2",
       bio: "Master of scaling business operations and ensuring flawless execution for enterprise clients.",
       socials: { linkedin: "#", twitter: "#" }
     },
@@ -95,14 +95,14 @@ export default function TeamSection() {
 
         .badge {
           display: inline-block;
-          background: rgba(0, 240, 255, 0.1);
+          background: var(--bg-alpha-light);
           color: var(--primary);
           padding: 0.5rem 1.5rem;
           border-radius: 50px;
           font-weight: 600;
           letter-spacing: 1px;
           margin-bottom: 1.5rem;
-          border: 1px solid rgba(0, 240, 255, 0.2);
+          border: 1px solid var(--glass-border);
         }
 
         .team-grid {
@@ -136,7 +136,6 @@ export default function TeamSection() {
 
         .team-card:hover {
           transform: translateY(-10px);
-          border-color: rgba(0, 240, 255, 0.4);
         }
 
         .image-wrapper {
@@ -154,11 +153,13 @@ export default function TeamSection() {
           height: 100%;
           object-fit: cover;
           object-position: center 15%; /* Perfect for portrait photos to keep the face centered */
-          transition: transform 0.5s;
+          transition: transform 0.5s, filter 0.5s;
+          filter: grayscale(40%) brightness(0.85) contrast(1.1);
         }
 
         .team-card:hover .team-image {
           transform: scale(1.1);
+          filter: grayscale(0%) brightness(1) contrast(1);
         }
 
         .social-overlay {

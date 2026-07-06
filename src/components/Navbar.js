@@ -1,21 +1,40 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import oryolLogo from "../../public/images/oryol_logo_transparent.png";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [theme, setTheme] = useState("dark");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+    // Initial theme setup
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
 
   const navLinks = [
     { name: "Home", href: "#hero" },
@@ -47,7 +66,7 @@ export default function Navbar() {
                 height: '45px', 
                 width: 'auto', 
                 objectFit: 'contain',
-                filter: 'brightness(0) invert(1)'
+                filter: 'var(--logo-filter)'
               }}
             />
           </a>
@@ -66,10 +85,15 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Toggle */}
-          <button className="mobile-toggle" onClick={() => setMobileOpen(true)}>
-            <Menu size={28} />
-          </button>
+          <div className="nav-actions">
+            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
+              {mounted && (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
+            </button>
+            {/* Mobile Toggle */}
+            <button className="mobile-toggle" onClick={() => setMobileOpen(true)}>
+              <Menu size={28} />
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -141,6 +165,14 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           gap: 1.5rem;
+          margin-left: auto;
+          margin-right: 1.5rem;
+        }
+
+        .nav-actions {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
         }
 
         .nav-link {
@@ -154,20 +186,24 @@ export default function Navbar() {
           color: var(--primary);
         }
 
-        .mobile-toggle {
+        .mobile-toggle, .theme-toggle {
           display: flex;
           align-items: center;
+          justify-content: center;
           background: transparent;
           border: none;
           color: var(--text-color);
           cursor: pointer;
-          margin-left: 1.5rem;
           transition: transform 0.2s;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
         }
 
-        .mobile-toggle:hover {
+        .mobile-toggle:hover, .theme-toggle:hover {
           transform: scale(1.1);
           color: var(--primary);
+          background: var(--bg-alpha-light);
         }
 
         :global(.dashboard-backdrop) {
@@ -194,11 +230,11 @@ export default function Navbar() {
           padding: 6rem 2rem 2rem 2rem;
           display: flex;
           flex-direction: column;
-          background: rgba(15, 23, 42, 0.95);
+          background: var(--bg-color);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border-left: 1px solid rgba(255,255,255,0.1);
-          box-shadow: -20px 0 50px rgba(0,0,0,0.5);
+          border-left: 1px solid var(--glass-border);
+          box-shadow: -20px 0 50px rgba(0,0,0,0.15);
         }
 
         :global(.close-menu) {
@@ -210,10 +246,10 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: rgba(255,255,255,0.05);
+          background: var(--bg-alpha-light);
           border-radius: 50%;
-          border: 1px solid rgba(255,255,255,0.1);
-          color: white;
+          border: 1px solid var(--glass-border);
+          color: var(--text-color);
           cursor: pointer;
           transition: all 0.2s;
           z-index: 10000;
@@ -235,7 +271,7 @@ export default function Navbar() {
         :global(.mobile-link) {
           font-size: 1.15rem;
           font-weight: 500;
-          color: rgba(255, 255, 255, 0.85);
+          color: var(--text-muted);
           text-decoration: none;
           transition: color 0.2s, padding-left 0.2s, background 0.2s;
           padding: 0.5rem 1rem;
@@ -243,17 +279,14 @@ export default function Navbar() {
         }
 
         :global(.mobile-link:hover) {
-          color: white;
-          background: rgba(255, 255, 255, 0.05);
+          color: var(--primary);
+          background: var(--bg-alpha-light);
           padding-left: 1.25rem;
         }
 
         @media (max-width: 1024px) {
           .desktop-nav {
             display: none;
-          }
-          .mobile-toggle {
-            margin-left: auto;
           }
         }
       `}</style>

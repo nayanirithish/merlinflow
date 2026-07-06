@@ -1,46 +1,61 @@
 :root {
-  /* Default to dark mode for a premium look, but allow light mode */
-  --bg-color: #ffffff;
-  --text-color: #1a1a1a;
-  --text-muted: #666666;
+  --bg-color: #f8fafc; /* Ashy off-white */
+  --text-color: #1e293b; /* Deep slate */
+  --text-muted: #64748b; /* Cool gray */
   
-  --primary: #0070f3;
-  --primary-hover: #0051a8;
-  --secondary: #eaeaea;
+  /* Vibrant but professional SaaS colors */
+  --primary: #4f46e5; /* Indigo */
+  --primary-hover: #6366f1; /* Lighter indigo for hover */
+  --secondary: #e0e7ff;
   
+  --accent-1: #0ea5e9; /* Light Blue */
+  --accent-2: #8b5cf6; /* Violet */
+  
+  /* Light Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(0, 0, 0, 0.1);
-  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  --glass-border: rgba(79, 70, 229, 0.6); /* Vibrant colored border for cards and sections in light mode */
+  --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --bg-alpha-light: rgba(79, 70, 229, 0.04);
+  --bg-alpha-hover: rgba(79, 70, 229, 0.08);
+  
+  /* Colorful subtle shadow */
+  --neon-glow: 0 4px 14px 0 rgba(79, 70, 229, 0.25);
+  --neon-glow-hover: 0 6px 20px rgba(79, 70, 229, 0.4);
 
-  --font-sans: "Rockwell Nova Light", "Rockwell Nova", "Rockwell", "Times New Roman", Times, serif;
-  --font-heading: "Rockwell Nova Light", "Rockwell Nova", "Rockwell", "Times New Roman", Times, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --image-filter: invert(1) hue-rotate(180deg) brightness(1.1); /* For dark images */
+  --image-blend: multiply;
 }
 
-/* Forced Dark Mode for Premium Feel by Default (often used in SaaS) */
-[data-theme="dark"],
-:root {
-  --bg-color: #06060a; /* Ultra deep premium black */
-  --text-color: #ffffff;
-  --text-muted: #a1a1aa;
+[data-theme="dark"] {
+  --bg-color: radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.12), transparent 40vw),
+              radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.12), transparent 40vw),
+              radial-gradient(circle at 50% 80%, rgba(139, 92, 246, 0.12), transparent 40vw),
+              #0a0a0f; /* Deep, elegant dark base */
+  --text-color: #f3f4f6;
+  --text-muted: #9ca3af;
   
-  /* Intense Premium Neon Colors */
-  --primary: #00f0ff; /* Neon Cyan */
-  --primary-hover: #00d6e6;
-  --secondary: #1e1e2f;
+  --primary: #6366f1; /* Vibrant Indigo */
+  --primary-hover: #818cf8;
+  --secondary: #1e1e28; /* Deep indigo-tinted dark gray to match the oily background */
   
-  --accent-1: #ff0055; /* Neon Pink */
-  --accent-2: #bf00ff; /* Neon Purple */
+  --accent-1: #22d3ee; /* Bright Cyan */
+  --accent-2: #a78bfa; /* Bright Violet */
   
-  /* Dark Glassmorphism for Neon Contrast */
-  --glass-bg: rgba(20, 20, 30, 0.5);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
-  --bg-alpha-light: rgba(255, 255, 255, 0.03);
-  --bg-alpha-hover: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.05); /* Crisp, light glass effect to pop against the dark canvas */
+  --glass-border: rgba(99, 102, 241, 0.15); /* Slightly softer indigo tinted border */
+  --glass-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  --bg-alpha-light: rgba(99, 102, 241, 0.08);
+  --bg-alpha-hover: rgba(99, 102, 241, 0.15);
   
-  /* Neon Glow Variables */
-  --neon-glow: 0 0 15px rgba(0, 240, 255, 0.4), 0 0 30px rgba(0, 240, 255, 0.2);
-  --neon-glow-hover: 0 0 20px rgba(0, 240, 255, 0.6), 0 0 40px rgba(0, 240, 255, 0.4);
+  --neon-glow: 0 4px 14px 0 rgba(99, 102, 241, 0.2);
+  --neon-glow-hover: 0 6px 20px rgba(99, 102, 241, 0.35);
+
+  --logo-filter: brightness(0) invert(1); /* White logo for dark mode */
+  --image-filter: none;
+  --image-blend: normal;
 }
 
 /* Base Reset */
@@ -61,7 +76,8 @@ html {
 }
 
 body {
-  background-color: var(--bg-color);
+  background: var(--bg-color);
+  background-attachment: fixed;
   color: var(--text-color);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -82,11 +98,18 @@ a {
 /* Premium Utilities */
 .glass-panel {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   border-radius: 16px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.glass-panel:hover {
+  box-shadow: var(--neon-glow-hover);
+  border-color: var(--primary);
+  transform: translateY(-5px) scale(1.01);
 }
 
 .text-gradient {
@@ -218,7 +241,7 @@ a {
         .a11y-wrapper {
           position: fixed;
           bottom: 2rem;
-          left: 2rem;
+          right: 2rem;
           z-index: 10000;
         }
 

@@ -131,7 +131,7 @@ export default function IntegrationsSection() {
 
         .integration-card:hover {
           border-color: var(--hover-color);
-          box-shadow: 0 10px 30px var(--shadow-dark);
+          box-shadow: var(--neon-glow-hover);
         }
 
         .integration-icon-wrapper {

@@ -46,15 +46,14 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 1, type: "spring" }}
           className="hero-image-wrapper"
         >
-          <div className="image-glow"></div>
-          
           <Image 
-            src="/images/neon_eagle.png" 
-            alt="Oryol Cyber Eagle" 
+            src="/images/hero_illustration_new.png" 
+            alt="Corporate Hero Illustration" 
             width={650} 
             height={650} 
             className="hero-image"
             priority
+            style={{ borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}
           />
         </motion.div>
       </div>
@@ -108,31 +107,21 @@ export default function Hero() {
           perspective: 1000px;
         }
 
-        .image-glow {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 80%;
-          height: 80%;
-          background: radial-gradient(circle, rgba(59,130,246,0.4) 0%, transparent 70%);
-          filter: blur(60px);
-          z-index: 0;
-        }
-
         .hero-image {
           position: relative;
           z-index: 1;
           width: 100%;
           height: auto;
-          filter: drop-shadow(0 25px 50px rgba(0,0,0,0.5));
+          filter: var(--image-filter) drop-shadow(0 25px 50px rgba(0,0,0,0.2));
+          mix-blend-mode: var(--image-blend);
           transform: scaleX(-1); /* Flips the eagle from right to left */
           animation: levitate 6s ease-in-out infinite;
+          transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
         }
 
         .btn-primary {
           background: var(--primary);
-          color: #000000;
+          color: #ffffff;
           border: none;
           padding: 1rem 2rem;
           border-radius: 50px;

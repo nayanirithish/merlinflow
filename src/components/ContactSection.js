@@ -241,7 +241,7 @@ export default function ContactSection() {
         .input-group {
           display: flex;
           align-items: center;
-          gap: 1.5rem;
+          gap: 1rem;
         }
 
         .input-group.align-top {
@@ -249,7 +249,7 @@ export default function ContactSection() {
         }
 
         .input-group label {
-          width: 100px;
+          width: 95px;
           flex-shrink: 0;
           text-align: left;
           font-weight: 500;
@@ -267,24 +267,33 @@ export default function ContactSection() {
           flex: 1;
           width: 100%;
           padding: 1rem;
-          background: var(--bg-alpha-light);
-          border: 1px solid var(--glass-border);
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.15);
           border-radius: 8px;
           color: var(--text-color);
           font-family: inherit;
+          font-size: 1rem;
           outline: none;
-          transition: border-color 0.2s;
+          transition: all 0.2s ease;
+        }
+
+        .input-group input::placeholder,
+        .input-group textarea::placeholder {
+           color: rgba(255, 255, 255, 0.4);
         }
 
         .input-group input:focus,
         .input-group select:focus,
         .input-group textarea:focus {
           border-color: var(--primary);
+          background: rgba(255, 255, 255, 0.06);
+          box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
         }
 
         .submit-btn {
           margin-top: 1rem;
-          margin-left: calc(100px + 1.5rem);
+          margin-left: calc(95px + 1rem);
+          width: calc(100% - 95px - 1rem);
           padding: 1rem;
           background: var(--primary);
           color: white;
@@ -297,11 +306,12 @@ export default function ContactSection() {
           align-items: center;
           justify-content: center;
           gap: 0.5rem;
-          transition: background 0.2s, opacity 0.2s;
+          transition: all 0.2s ease;
         }
 
         .submit-btn:hover:not(:disabled) {
           background: var(--primary-hover);
+          transform: translateY(-2px);
         }
         
         .submit-btn:disabled {
@@ -327,6 +337,7 @@ export default function ContactSection() {
           }
           .submit-btn {
             margin-left: 0;
+            width: 100%;
           }
         }
       `}</style>

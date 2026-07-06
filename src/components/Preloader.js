@@ -67,7 +67,7 @@ export default function Preloader() {
           >
             {/* WING IMAGE (LEFT HALF) */}
             <div className="wing-image-container left-wing-image">
-              <img src="/images/neon_wings.png" alt="Wings Left" />
+              <img src="/images/preloader_logo.png" alt="Logo Left" />
             </div>
 
             {/* TEXT (LEFT HALF) */}
@@ -93,7 +93,7 @@ export default function Preloader() {
           >
             {/* WING IMAGE (RIGHT HALF) */}
             <div className="wing-image-container right-wing-image">
-              <img src="/images/neon_wings.png" alt="Wings Right" />
+              <img src="/images/preloader_logo.png" alt="Logo Right" />
             </div>
 
             {/* TEXT (RIGHT HALF) */}

@@ -1,6 +1,6 @@
 "use client";
 
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import oryolLogo from "../../public/images/oryol_logo_transparent.png";
 
@@ -60,12 +60,11 @@ export default function Footer() {
           <div className="footer-links">
             <h3>Follow Us</h3>
             <div className="social-links">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook size={20} /></a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram size={20} /></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FaXTwitter size={20} /></a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube size={20} /></a>
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp size={20} /></a>
+              <a href="https://www.facebook.com/share/1BQNJTLbMt/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook size={20} /></a>
+              <a href="https://www.instagram.com/oryol_technologies__pvt_ltd_?igsh=dXM0dTRvZjlqbzIz" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram size={20} /></a>
+              <a href="https://x.com/ORYOLTECH" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FaXTwitter size={20} /></a>
+              <a href="https://www.linkedin.com/company/oryol-technologies-pvt-ltd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
+              <a href="https://youtube.com/@oryoltechnologiespvtltd?si=sfN8mNV3e37vYgk5" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube size={20} /></a>
             </div>
           </div>
         </div>
@@ -109,10 +108,10 @@ export default function Footer() {
         }
 
         .social-links a:hover {
-          background: var(--primary);
-          color: #fff;
+          background: var(--bg-alpha-hover);
+          color: var(--primary);
           transform: translateY(-2px);
-          box-shadow: 0 5px 15px rgba(0, 240, 255, 0.4);
+          box-shadow: var(--neon-glow);
         }
 
         .footer-links h3 {
