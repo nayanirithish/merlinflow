@@ -363,17 +363,27 @@ export default function Hero() {
         }
 
         @media (max-width: 1024px) {
-          .hero-grid {
+          .hero-grid, .hero-grid.demo-active {
             grid-template-columns: 1fr;
             text-align: center;
           }
-          .hero-buttons {
+          .hero-grid.demo-active .hero-buttons {
             justify-content: center;
+          }
+          .hero-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+          }
+          .btn-primary, .btn-secondary {
+            width: 100%;
+            max-width: 300px;
           }
           .hero-text-content {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
           }
         }
       `}</style>
