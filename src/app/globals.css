@@ -22,8 +22,8 @@
   --neon-glow: 0 4px 14px 0 rgba(79, 70, 229, 0.25);
   --neon-glow-hover: 0 6px 20px rgba(79, 70, 229, 0.4);
 
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  --font-heading: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
 
   --image-filter: invert(1) hue-rotate(180deg) brightness(1.1); /* For dark images */
   --image-blend: multiply;
@@ -63,6 +63,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
@@ -93,6 +94,31 @@ h1, h2, h3, h4, h5, h6, .logo {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* --- Native App Experience Enhancements --- */
+
+/* 1. Custom Scrollbars (Unifies Windows/Linux with macOS feel) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 10, 15, 0.5); 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.7); 
+}
+
+/* 2. Interactive Elements (Prevent selection and double-tap zoom) */
+a, button, .glass-panel, .nav-link, .plan-btn {
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 /* Premium Utilities */
@@ -241,19 +267,20 @@ a {
         .a11y-wrapper {
           position: fixed;
           bottom: 2rem;
-          right: 2rem;
+          left: 2rem;
           z-index: 10000;
         }
 
         .a11y-trigger {
-          width: 56px;
-          height: 56px;
-          border-radius: 50%;
-          background: rgba(20, 20, 30, 0.7);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          border: 1px solid rgba(0, 240, 255, 0.3);
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 240, 255, 0.1) inset;
+          width: 64px;
+          height: 64px;
+          border-radius: 50%; /* Circle shape */
+          background: rgba(11, 92, 255, 0.15); /* Tinted glass blue */
+          color: #0b5cff;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          border: 1px solid rgba(11, 92, 255, 0.3);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
           cursor: pointer;
           display: flex;
           align-items: center;
@@ -263,9 +290,9 @@ a {
 
         .a11y-trigger:hover {
           transform: translateY(-4px) scale(1.05);
-          border: 1px solid rgba(0, 240, 255, 0.8);
-          background: rgba(20, 20, 30, 0.9);
-          box-shadow: 0 8px 25px rgba(0, 240, 255, 0.25), 0 0 20px rgba(0, 240, 255, 0.2) inset;
+          background: rgba(11, 92, 255, 0.25);
+          border: 1px solid rgba(11, 92, 255, 0.5);
+          box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
         }
 
         .a11y-panel {

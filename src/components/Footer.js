@@ -2,7 +2,7 @@
 
 import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import oryolLogo from "../../public/images/oryol_logo_transparent.png";
+import merlinflowLogo from "../../public/images/company.png";
 
 export default function Footer() {
   const handleLinkClick = (e, href) => {
@@ -20,19 +20,18 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="footer-brand">
             <h3 className="footer-logo">
-              <img 
-                src={oryolLogo.src}
-                alt="Oryol Logo"
-                style={{ 
-                  height: '55px', 
-                  width: 'auto', 
-                  objectFit: 'contain',
-                  filter: 'brightness(0) invert(1)'
+              <img
+                src={merlinflowLogo.src}
+                alt="MerlinFlow Logo"
+                style={{
+                  height: '180px',
+                  width: 'auto',
+                  objectFit: 'contain'
                 }}
               />
             </h3>
             <p style={{ color: "var(--text-muted)", marginBottom: "2rem", maxWidth: "400px", lineHeight: "1.6" }}>
-              The premium Operating System for modern Educational Institutions and Enterprises. Unify your workflows, automate complex processes, and unlock unprecedented growth with our state-of-the-art, secure SaaS platform.
+              The Operating System for modern Educational Institutions and Enterprises. Unify your workflows, automate complex processes, and unlock unprecedented growth with our state-of-the-art, secure SaaS platform.
             </p>
           </div>
 
@@ -40,10 +39,12 @@ export default function Footer() {
           <div className="footer-links">
             <h3>Product</h3>
             <ul>
+              <li><a href="#products" onClick={(e) => handleLinkClick(e, '#products')}>Products</a></li>
+              <li><a href="#how-it-works" onClick={(e) => handleLinkClick(e, '#how-it-works')}>How It Works</a></li>
               <li><a href="#features" onClick={(e) => handleLinkClick(e, '#features')}>Features</a></li>
               <li><a href="#integrations" onClick={(e) => handleLinkClick(e, '#integrations')}>Integrations</a></li>
               <li><a href="#security" onClick={(e) => handleLinkClick(e, '#security')}>Security</a></li>
-              <li><a href="#impact" onClick={(e) => handleLinkClick(e, '#impact')}>Impact & Scale</a></li>
+              <li><a href="#pricing" onClick={(e) => handleLinkClick(e, '#pricing')}>Pricing</a></li>
             </ul>
           </div>
 
@@ -52,8 +53,9 @@ export default function Footer() {
             <ul>
               <li><a href="#about" onClick={(e) => handleLinkClick(e, '#about')}>About Us</a></li>
               <li><a href="#testimonials" onClick={(e) => handleLinkClick(e, '#testimonials')}>Success Stories</a></li>
-              <li><a href="#faq" onClick={(e) => handleLinkClick(e, '#faq')}>FAQ</a></li>
+              <li><a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')}>FAQ</a></li>
               <li><a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')}>Contact</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
             </ul>
           </div>
 
@@ -61,16 +63,16 @@ export default function Footer() {
             <h3>Follow Us</h3>
             <div className="social-links">
               <a href="https://www.facebook.com/share/1BQNJTLbMt/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook size={20} /></a>
-              <a href="https://www.instagram.com/oryol_technologies__pvt_ltd_?igsh=dXM0dTRvZjlqbzIz" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram size={20} /></a>
-              <a href="https://x.com/ORYOLTECH" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FaXTwitter size={20} /></a>
-              <a href="https://www.linkedin.com/company/oryol-technologies-pvt-ltd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
-              <a href="https://youtube.com/@oryoltechnologiespvtltd?si=sfN8mNV3e37vYgk5" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube size={20} /></a>
+              <a href="https://www.instagram.com/merlinflow_technologies__pvt_ltd_?igsh=dXM0dTRvZjlqbzIz" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram size={20} /></a>
+              <a href="https://x.com/MERLINFLOWTECH" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FaXTwitter size={20} /></a>
+              <a href="https://www.linkedin.com/company/merlinflow-technologies-pvt-ltd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
+              <a href="https://youtube.com/@merlinflowtechnologiespvtltd?si=sfN8mNV3e37vYgk5" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube size={20} /></a>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Oryol Technologies Pvt Ltd. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} MerlinFlow Technologies Pvt Ltd. All rights reserved.</p>
         </div>
       </div>
 
@@ -130,6 +132,7 @@ export default function Footer() {
 
         .footer-links a {
           color: var(--text-muted);
+          font-size: 1.1rem;
           transition: color 0.2s;
           cursor: pointer;
         }

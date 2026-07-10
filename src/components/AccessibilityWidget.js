@@ -270,7 +270,7 @@ export default function AccessibilityWidget() {
 
             {/* Footer */}
             <div className="a11y-footer">
-              Accessibility Platform By Oryol
+              Accessibility Platform By MerlinFlow
             </div>
           </motion.div>
         )}
@@ -282,7 +282,7 @@ export default function AccessibilityWidget() {
           onClick={() => setIsOpen(true)}
           aria-label="Toggle Accessibility Menu"
         >
-          <Accessibility size={26} color="#00f0ff" />
+          <Accessibility size={32} strokeWidth={2.5} color="white" />
         </button>
       )}
 

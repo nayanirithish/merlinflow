@@ -1,26 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import oryolLogo from "../../public/images/oryol_logo_transparent.png";
+import Image from "next/image";
+import Link from "next/link";
+import merlinflowLogo from "../../public/images/company.png";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [theme, setTheme] = useState("dark");
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    // Initial theme setup
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    } else {
-      document.documentElement.setAttribute("data-theme", "dark");
-    }
 
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -29,19 +20,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-  };
+
 
   const navLinks = [
     { name: "Home", href: "#hero" },
-    { name: "Impact", href: "#impact" },
     { name: "About Us", href: "#about" },
+    { name: "Products", href: "#products" },
     { name: "Features", href: "#features" },
+    { name: "How It Works", href: "#how-it-works" },
     { name: "Integrations", href: "#integrations" },
+    { name: "Pricing", href: "#pricing" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -59,15 +47,16 @@ export default function Navbar() {
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="container nav-content">
           <a href="#hero" onClick={(e) => handleLinkClick(e, '#hero')} className="logo" style={{ display: 'flex', alignItems: 'center' }}>
-            <img 
-              src={oryolLogo.src}
-              alt="Oryol Logo"
+            <Image 
+              src={merlinflowLogo}
+              alt="MerlinFlow Logo"
+              height={65}
               style={{ 
-                height: '45px', 
                 width: 'auto', 
                 objectFit: 'contain',
-                filter: 'var(--logo-filter)'
+                transform: 'scale(1.3)'
               }}
+              priority
             />
           </a>
 
@@ -86,9 +75,9 @@ export default function Navbar() {
           </div>
 
           <div className="nav-actions">
-            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
-              {mounted && (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
-            </button>
+            <Link href="/dashboard" className="primary-btn dashboard-btn">
+              Dashboard
+            </Link>
             {/* Mobile Toggle */}
             <button className="mobile-toggle" onClick={() => setMobileOpen(true)}>
               <Menu size={28} />
@@ -177,7 +166,7 @@ export default function Navbar() {
 
         .nav-link {
           font-weight: 500;
-          font-size: 0.95rem;
+          font-size: 1.05rem;
           color: var(--text-color);
           transition: color 0.2s;
         }
@@ -287,6 +276,23 @@ export default function Navbar() {
         @media (max-width: 1024px) {
           .desktop-nav {
             display: none;
+          }
+        }
+
+        @media (min-width: 1025px) {
+          .mobile-toggle {
+            display: none;
+          }
+        }
+
+        :global(.dashboard-btn) {
+          padding: 0.6rem 1.25rem;
+          font-size: 0.95rem;
+        }
+
+        @media (max-width: 640px) {
+          :global(.dashboard-btn) {
+            display: none; /* Hide on very small screens to save space */
           }
         }
       `}</style>

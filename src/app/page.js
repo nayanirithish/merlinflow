@@ -1,12 +1,14 @@
 import Hero from "../components/Hero";
 import StatsSection from "../components/StatsSection";
 import AboutSection from "../components/AboutSection";
-import TeamSection from "../components/TeamSection";
+import WhyMerlinFlow from "../components/WhyMerlinFlow";
+import HowItWorks from "../components/HowItWorks";
 import IndustryFeatures from "../components/IndustryFeatures";
+import ProductsOverview from "../components/ProductsOverview";
 import IntegrationsSection from "../components/IntegrationsSection";
 import Testimonials from "../components/Testimonials";
 import SecuritySection from "../components/SecuritySection";
-import FAQ from "../components/FAQ";
+import PricingSection from "../components/PricingSection";
 import ContactSection from "../components/ContactSection";
 
 export default function Home() {
@@ -15,12 +17,14 @@ export default function Home() {
       <div id="hero"><Hero /></div>
       <StatsSection />
       <AboutSection />
-      <TeamSection />
+      <WhyMerlinFlow />
+      <HowItWorks />
       <IndustryFeatures />
+      <ProductsOverview />
       <IntegrationsSection />
       <SecuritySection />
+      <PricingSection />
       <Testimonials />
-      <FAQ />
       <ContactSection />
     </main>
   );

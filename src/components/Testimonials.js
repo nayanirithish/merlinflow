@@ -7,7 +7,7 @@ import { Quote, Star, Send, X } from "lucide-react";
 export default function Testimonials() {
   const initialTestimonials = [
     {
-      quote: "Oryol ERP transformed how we manage our 3,000+ students. The fee collection and parent portal modules alone saved us hundreds of hours.",
+      quote: "MerlinFlow ERP transformed how we manage our 3,000+ students. The fee collection and parent portal modules alone saved us hundreds of hours.",
       author: "Dr. Sarah Jenkins",
       role: "Principal, Oakridge International",
       industry: "Education",
@@ -21,14 +21,14 @@ export default function Testimonials() {
       rating: 5
     },
     {
-      quote: "HIPAA compliance was our biggest hurdle. Oryol provided an incredibly secure EHR system that our doctors actually love using.",
+      quote: "HIPAA compliance was our biggest hurdle. MerlinFlow provided an incredibly secure EHR system that our doctors actually love using.",
       author: "Dr. Elena Rodriguez",
       role: "Chief Medical Officer, City Health",
       industry: "Hospitals & Clinics",
       rating: 5
     },
     {
-      quote: "The analytics tools provided by Oryol ERP gave us the exact insights we needed to optimize our supply chain and cut costs by 15%.",
+      quote: "The analytics tools provided by MerlinFlow ERP gave us the exact insights we needed to optimize our supply chain and cut costs by 15%.",
       author: "James Peterson",
       role: "Operations Director, Global Logistics",
       industry: "Corporate",
@@ -54,7 +54,7 @@ export default function Testimonials() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/oryoltechnologies@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/merlinflowtechnologies@gmail.com", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
@@ -193,7 +193,7 @@ export default function Testimonials() {
 
                     <div className="feedback-input-group">
                       <label>Your Review</label>
-                      <textarea rows="4" required value={newReview.quote} onChange={e => setNewReview({...newReview, quote: e.target.value})} placeholder="How has Oryol helped your business?"></textarea>
+                      <textarea rows="4" required value={newReview.quote} onChange={e => setNewReview({...newReview, quote: e.target.value})} placeholder="How has MerlinFlow helped your business?"></textarea>
                     </div>
 
                     <button type="submit" className="feedback-submit-btn" disabled={isSubmitting}>

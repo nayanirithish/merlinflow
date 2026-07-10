@@ -16,36 +16,36 @@ export default function IndustryFeatures() {
 
   const featuresData = {
     education: [
-      { title: "Admissions & Enrollment", desc: "Automate the entire student lifecycle from application to graduation.", icon: <Users className="text-blue-500" /> },
-      { title: "Fee & Billing Management", desc: "Automate fee collection, generate receipts, and track defaulters easily.", icon: <CheckCircle className="text-green-500" /> },
-      { title: "Academics & Grading", desc: "Manage curriculum, conduct exams, and generate comprehensive report cards.", icon: <FileText className="text-purple-500" /> },
-      { title: "Timetable & Scheduling", desc: "Conflict-free scheduling for classes, teachers, and resources.", icon: <Calendar className="text-yellow-500" /> },
-      { title: "Data Security", desc: "Bank-level encryption ensures student and staff data is always secure.", icon: <ShieldCheck className="text-red-500" /> },
-      { title: "Parent Portal", desc: "Dedicated access for parents to track progress, attendance, and pay fees.", icon: <CheckCircle className="text-indigo-500" /> }
+      { title: "Admissions & Enrollment", desc: "Automate the entire student lifecycle from application to graduation.", icon: <Users size={24} color="#3b82f6" />, color: "#3b82f6", bgLight: "#eff6ff" },
+      { title: "Fee & Billing Management", desc: "Automate fee collection, generate receipts, and track defaulters easily.", icon: <CheckCircle size={24} color="#10b981" />, color: "#10b981", bgLight: "#ecfdf5" },
+      { title: "Academics & Grading", desc: "Manage curriculum, conduct exams, and generate comprehensive report cards.", icon: <FileText size={24} color="#a855f7" />, color: "#a855f7", bgLight: "#faf5ff" },
+      { title: "Timetable & Scheduling", desc: "Conflict-free scheduling for classes, teachers, and resources.", icon: <Calendar size={24} color="#eab308" />, color: "#eab308", bgLight: "#fef9c3" },
+      { title: "Data Security", desc: "Bank-level encryption ensures student and staff data is always secure.", icon: <ShieldCheck size={24} color="#ef4444" />, color: "#ef4444", bgLight: "#fef2f2" },
+      { title: "Parent Portal", desc: "Dedicated access for parents to track progress, attendance, and pay fees.", icon: <CheckCircle size={24} color="#6366f1" />, color: "#6366f1", bgLight: "#e0e7ff" }
     ],
     hotels: [
-      { title: "Reservation System", desc: "Real-time booking engine integrated with global OTAs and front desk.", icon: <Calendar className="text-blue-500" /> },
-      { title: "Property Management (PMS)", desc: "Manage housekeeping, maintenance, and room statuses seamlessly.", icon: <Building2 className="text-green-500" /> },
-      { title: "Point of Sale (POS)", desc: "Integrated billing for restaurants, spas, and other hotel amenities.", icon: <BarChart className="text-purple-500" /> },
-      { title: "Guest Experience", desc: "Self-check-in kiosks and mobile room keys for a modern guest journey.", icon: <Users className="text-yellow-500" /> },
-      { title: "Inventory & Procurement", desc: "Automate stock levels for F&B and housekeeping supplies.", icon: <CheckCircle className="text-red-500" /> },
-      { title: "Revenue Management", desc: "Dynamic pricing algorithms to maximize occupancy and RevPAR.", icon: <Activity className="text-indigo-500" /> }
+      { title: "Reservation System", desc: "Real-time booking engine integrated with global OTAs and front desk.", icon: <Calendar size={24} color="#3b82f6" />, color: "#3b82f6", bgLight: "#eff6ff" },
+      { title: "Property Management (PMS)", desc: "Manage housekeeping, maintenance, and room statuses seamlessly.", icon: <Building2 size={24} color="#10b981" />, color: "#10b981", bgLight: "#ecfdf5" },
+      { title: "Point of Sale (POS)", desc: "Integrated billing for restaurants, spas, and other hotel amenities.", icon: <BarChart size={24} color="#a855f7" />, color: "#a855f7", bgLight: "#faf5ff" },
+      { title: "Guest Experience", desc: "Self-check-in kiosks and mobile room keys for a modern guest journey.", icon: <Users size={24} color="#eab308" />, color: "#eab308", bgLight: "#fef9c3" },
+      { title: "Inventory & Procurement", desc: "Automate stock levels for F&B and housekeeping supplies.", icon: <CheckCircle size={24} color="#ef4444" />, color: "#ef4444", bgLight: "#fef2f2" },
+      { title: "Revenue Management", desc: "Dynamic pricing algorithms to maximize occupancy and RevPAR.", icon: <Activity size={24} color="#6366f1" />, color: "#6366f1", bgLight: "#e0e7ff" }
     ],
     healthcare: [
-      { title: "Patient Records (EHR)", desc: "Secure, centralized digital records for complete patient history.", icon: <FileText className="text-blue-500" /> },
-      { title: "Appointment Scheduling", desc: "Smart booking system for doctors, surgeries, and diagnostic labs.", icon: <Clock className="text-green-500" /> },
-      { title: "Pharmacy Management", desc: "Track medication inventory, expirations, and automate billing.", icon: <Briefcase className="text-purple-500" /> },
-      { title: "Insurance & Billing", desc: "Streamline claims processing and out-of-pocket patient invoicing.", icon: <BarChart className="text-yellow-500" /> },
-      { title: "Telemedicine Ready", desc: "Integrated video consultations and remote patient monitoring.", icon: <Activity className="text-red-500" /> },
-      { title: "Compliance & Security", desc: "HIPAA compliant infrastructure ensuring strict data privacy.", icon: <ShieldCheck className="text-indigo-500" /> }
+      { title: "Patient Records (EHR)", desc: "Secure, centralized digital records for complete patient history.", icon: <FileText size={24} color="#3b82f6" />, color: "#3b82f6", bgLight: "#eff6ff" },
+      { title: "Appointment Scheduling", desc: "Smart booking system for doctors, surgeries, and diagnostic labs.", icon: <Clock size={24} color="#10b981" />, color: "#10b981", bgLight: "#ecfdf5" },
+      { title: "Pharmacy Management", desc: "Track medication inventory, expirations, and automate billing.", icon: <Briefcase size={24} color="#a855f7" />, color: "#a855f7", bgLight: "#faf5ff" },
+      { title: "Insurance & Billing", desc: "Streamline claims processing and out-of-pocket patient invoicing.", icon: <BarChart size={24} color="#eab308" />, color: "#eab308", bgLight: "#fef9c3" },
+      { title: "Telemedicine Ready", desc: "Integrated video consultations and remote patient monitoring.", icon: <Activity size={24} color="#ef4444" />, color: "#ef4444", bgLight: "#fef2f2" },
+      { title: "Compliance & Security", desc: "HIPAA compliant infrastructure ensuring strict data privacy.", icon: <ShieldCheck size={24} color="#6366f1" />, color: "#6366f1", bgLight: "#e0e7ff" }
     ],
     corporate: [
-      { title: "Human Resources (HRMS)", desc: "Manage payroll, attendance, leave, and employee lifecycles.", icon: <Users className="text-blue-500" /> },
-      { title: "Financial Accounting", desc: "Comprehensive ledgers, tax compliance, and automated reporting.", icon: <BarChart className="text-green-500" /> },
-      { title: "Supply Chain", desc: "End-to-end visibility from procurement to final delivery.", icon: <Briefcase className="text-purple-500" /> },
-      { title: "CRM Integration", desc: "Track sales pipelines, customer interactions, and support tickets.", icon: <CheckCircle className="text-yellow-500" /> },
-      { title: "Asset Management", desc: "Track depreciation, maintenance schedules, and locations of IT assets.", icon: <Building2 className="text-red-500" /> },
-      { title: "Advanced Analytics", desc: "Customizable dashboards and AI-driven business intelligence.", icon: <Activity className="text-indigo-500" /> }
+      { title: "Human Resources (HRMS)", desc: "Manage payroll, attendance, leave, and employee lifecycles.", icon: <Users size={24} color="#3b82f6" />, color: "#3b82f6", bgLight: "#eff6ff" },
+      { title: "Financial Accounting", desc: "Comprehensive ledgers, tax compliance, and automated reporting.", icon: <BarChart size={24} color="#10b981" />, color: "#10b981", bgLight: "#ecfdf5" },
+      { title: "Supply Chain", desc: "End-to-end visibility from procurement to final delivery.", icon: <Briefcase size={24} color="#a855f7" />, color: "#a855f7", bgLight: "#faf5ff" },
+      { title: "CRM Integration", desc: "Track sales pipelines, customer interactions, and support tickets.", icon: <CheckCircle size={24} color="#eab308" />, color: "#eab308", bgLight: "#fef9c3" },
+      { title: "Asset Management", desc: "Track depreciation, maintenance schedules, and locations of IT assets.", icon: <Building2 size={24} color="#ef4444" />, color: "#ef4444", bgLight: "#fef2f2" },
+      { title: "Advanced Analytics", desc: "Customizable dashboards and AI-driven business intelligence.", icon: <Activity size={24} color="#6366f1" />, color: "#6366f1", bgLight: "#e0e7ff" }
     ]
   };
 
@@ -87,7 +87,7 @@ export default function IndustryFeatures() {
             >
               {featuresData[activeTab].map((feature, i) => (
                 <div key={i} className="feature-card glass-panel">
-                  <div className="icon-wrapper">{feature.icon}</div>
+                  <div className="icon-wrapper" style={{ backgroundColor: feature.bgLight, color: feature.color }}>{feature.icon}</div>
                   <h3 className="feature-title">{feature.title}</h3>
                   <p className="feature-desc">{feature.desc}</p>
                 </div>
@@ -161,13 +161,17 @@ export default function IndustryFeatures() {
 
         .features-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 1rem;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
         }
 
         .feature-card {
-          padding: 1.5rem;
+          padding: 2rem 2rem;
           transition: transform 0.3s;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
         }
 
         .feature-card:hover {
@@ -178,13 +182,11 @@ export default function IndustryFeatures() {
         .icon-wrapper {
           width: 50px;
           height: 50px;
-          background: rgba(255, 255, 255, 0.05);
           border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 1.5rem;
-          color: var(--primary);
+          margin: 0 auto 1.5rem auto;
         }
 
         .feature-title {
@@ -197,6 +199,16 @@ export default function IndustryFeatures() {
         .feature-desc {
           color: var(--text-muted);
           line-height: 1.6;
+        }
+        @media (max-width: 1024px) {
+          .features-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (max-width: 640px) {
+          .features-grid {
+            grid-template-columns: 1fr;
+          }
         }
       `}</style>
     </section>

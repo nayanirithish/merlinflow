@@ -6,19 +6,19 @@ import Image from "next/image";
 
 export default function SecuritySection() {
   const securityFeatures = [
-    { title: "HIPAA Compliant", desc: "Strict adherence to health data privacy for clinical environments.", icon: <FileDigit size={32} /> },
-    { title: "End-to-End Encryption", desc: "Military-grade AES-256 encryption for data at rest and in transit.", icon: <Lock size={32} /> },
-    { title: "99.99% Guaranteed Uptime", desc: "Redundant cloud architecture ensures you never go offline.", icon: <CloudLightning size={32} /> },
-    { title: "SOC 2 Type II Certified", desc: "Audited operational security for enterprise peace of mind.", icon: <ShieldCheck size={32} /> },
-    { title: "Automated Backups", desc: "Geographically distributed daily backups prevent data loss.", icon: <Server size={32} /> },
-    { title: "Real-time Threat Monitoring", desc: "AI-driven anomaly detection stops breaches before they happen.", icon: <ActivitySquare size={32} /> },
+    { title: "HIPAA Compliant", desc: "Strict adherence to health data privacy for clinical environments.", icon: <FileDigit size={32} color="#3b82f6" />, color: "#3b82f6", bgLight: "#eff6ff" },
+    { title: "End-to-End Encryption", desc: "Military-grade AES-256 encryption for data at rest and in transit.", icon: <Lock size={32} color="#6366f1" />, color: "#6366f1", bgLight: "#e0e7ff" },
+    { title: "99.99% Guaranteed Uptime", desc: "Redundant cloud architecture ensures you never go offline.", icon: <CloudLightning size={32} color="#a855f7" />, color: "#a855f7", bgLight: "#faf5ff" },
+    { title: "SOC 2 Type II Certified", desc: "Audited operational security for enterprise peace of mind.", icon: <ShieldCheck size={32} color="#10b981" />, color: "#10b981", bgLight: "#ecfdf5" },
+    { title: "Automated Backups", desc: "Geographically distributed daily backups prevent data loss.", icon: <Server size={32} color="#f97316" />, color: "#f97316", bgLight: "#fff7ed" },
+    { title: "Real-time Threat Monitoring", desc: "AI-driven anomaly detection stops breaches before they happen.", icon: <ActivitySquare size={32} color="#ef4444" />, color: "#ef4444", bgLight: "#fef2f2" },
   ];
 
   return (
     <section id="security" className="security-section">
       <div className="container">
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -29,47 +29,29 @@ export default function SecuritySection() {
             Your data is our <span className="text-gradient">Fort Knox.</span>
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "1.1rem", maxWidth: "800px", margin: "0 auto 2rem auto", lineHeight: "1.6" }}>
-            Whether you are managing sensitive patient records, student financial data, or high-volume hotel transactions, Oryol ERP provides uncompromising, world-class security infrastructure out of the box.
+            Whether you are managing sensitive patient records, student financial data, or high-volume hotel transactions, MerlinFlow ERP provides uncompromising, world-class security infrastructure out of the box.
           </p>
         </motion.div>
 
-        <div className="layout-grid">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="image-column"
-          >
-            <div style={{ maxWidth: "400px", margin: "0 auto" }}>
-              <Image 
-                src="/images/1000173929-removebg-preview.png" 
-                alt="Corporate Security Shield" 
-                width={500} 
-                height={500} 
-                style={{ width: "100%", height: "auto", display: "block" }} 
-              />
-            </div>
-          </motion.div>
-
-          <div className="features-grid">
+        <div className="features-grid">
             {securityFeatures.map((feature, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: i * 0.1 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-20px" }}
+                transition={{ duration: 0.5, delay: i * 0.1, type: "spring", stiffness: 100 }}
+                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)", borderColor: "#94a3b8" }}
                 className="sec-feature"
               >
-                <div className="sec-icon">{feature.icon}</div>
-                <div>
+                <div className="sec-header">
+                  <div className="sec-icon" style={{ backgroundColor: feature.bgLight }}>{feature.icon}</div>
                   <h4>{feature.title}</h4>
-                  <p>{feature.desc}</p>
                 </div>
+                <p>{feature.desc}</p>
               </motion.div>
             ))}
           </div>
-        </div>
       </div>
 
       <style jsx global>{`
@@ -86,13 +68,6 @@ export default function SecuritySection() {
           flex-direction: column;
           align-items: center;
           margin-bottom: 5rem;
-        }
-
-        .layout-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 4rem;
-          align-items: center;
         }
 
         .badge {
@@ -115,37 +90,55 @@ export default function SecuritySection() {
 
         .features-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1rem;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+          max-width: 1200px;
+          margin: 0 auto;
         }
 
         .sec-feature {
           display: flex;
-          gap: 1rem;
+          flex-direction: column;
           align-items: flex-start;
+          background: #ffffff;
+          padding: 2.5rem 2rem;
+          border-radius: 16px;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+          transition: border-color 0.3s ease;
+          height: 100%;
+        }
+
+        .sec-header {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1.25rem;
         }
 
         .sec-icon {
-          color: var(--primary);
-          background: var(--bg-alpha-light);
-          padding: 1rem;
-          border-radius: 12px;
+          width: 56px;
+          height: 56px;
+          border-radius: 14px;
           display: flex;
           align-items: center;
           justify-content: center;
+          flex-shrink: 0;
         }
 
         .sec-feature h4 {
-          font-size: 1.1rem;
+          font-size: 1.15rem;
           font-weight: 700;
-          color: var(--text-color);
-          margin-bottom: 0.5rem;
+          color: #0f172a;
+          margin: 0;
+          line-height: 1.3;
         }
 
         .sec-feature p {
-          font-size: 0.9rem;
-          color: #94a3b8;
-          line-height: 1.5;
+          font-size: 0.95rem;
+          color: #475569;
+          line-height: 1.6;
+          margin: 0;
         }
 
         .primary-btn {
@@ -167,11 +160,8 @@ export default function SecuritySection() {
         }
 
         @media (max-width: 1024px) {
-          .layout-grid {
-            grid-template-columns: 1fr;
-          }
-          .text-content {
-            text-align: center;
+          .features-grid {
+            grid-template-columns: repeat(2, 1fr);
           }
         }
         

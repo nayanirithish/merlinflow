@@ -32,7 +32,7 @@ export default function IntegrationsSection() {
               Plays nicely with <span className="text-gradient">everyone.</span>
             </h2>
             <p style={{ color: "var(--text-muted)", fontSize: "1.1rem", marginBottom: "2rem" }}>
-              Oryol ERP doesn't force you to rip and replace. We seamlessly integrate with your existing infrastructure, payment gateways, and hardware devices to create a unified ecosystem.
+              MerlinFlow ERP doesn't force you to rip and replace. We seamlessly integrate with your existing infrastructure, payment gateways, and hardware devices to create a unified ecosystem.
             </p>
             
             <ul className="benefits-list">

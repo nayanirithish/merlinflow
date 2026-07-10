@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Target, Rocket } from "lucide-react";
+import { Users, Target, Rocket, Globe } from "lucide-react";
 import Image from "next/image";
 
 export default function AboutSection() {
@@ -20,7 +20,7 @@ export default function AboutSection() {
             Democratizing <span className="text-gradient">Enterprise Software.</span>
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "1.1rem", maxWidth: "800px", margin: "0 auto", lineHeight: "1.6" }}>
-            Oryol Technologies was founded with a single vision: to democratize premium, enterprise-grade software for institutions of all sizes. We believe that whether you run a single school or a global hotel chain, you deserve access to world-class tools.
+            MerlinFlow Technologies was founded with a single vision: to democratize premium, enterprise-grade software for institutions of all sizes. We believe that whether you run a single school or a global hotel chain, you deserve access to world-class tools.
           </p>
         </motion.div>
 
@@ -29,22 +29,23 @@ export default function AboutSection() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="about-image-wrapper"
+            className="about-image-content"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%" }}
           >
-            <Image 
-              src="/images/1000173938-removebg-preview.png" 
-              alt="Oryol Cloud Infrastructure" 
-              width={600} 
-              height={600} 
-              className="about-image"
-              style={{ width: "100%", height: "auto" }}
-            />
-            <div className="image-overlay"></div>
+            <div style={{ width: "100%", maxWidth: "800px", margin: "0 auto", height: "100%", display: "flex" }}>
+              <Image 
+                src="/images/story11.png" 
+                alt="Our Story" 
+                width={800} 
+                height={800} 
+                style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} 
+              />
+            </div>
           </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             className="about-text-content"
           >
@@ -64,10 +65,10 @@ export default function AboutSection() {
                 </div>
               </div>
               <div className="feature-item">
-                <Users color="var(--accent-2)" size={24} />
+                <Globe color="var(--accent-2)" size={24} />
                 <div>
-                  <h4>The Team</h4>
-                  <p>Passionate engineers and industry veterans pushing boundaries.</p>
+                  <h4>Our Vision</h4>
+                  <p>To be the global standard for unified, intelligent enterprise management.</p>
                 </div>
               </div>
             </div>
@@ -78,9 +79,18 @@ export default function AboutSection() {
 
       <style jsx>{`
         .section-container {
-          padding: 4rem 2rem;
+          padding: 6rem 2rem;
           position: relative;
-          background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.02));
+          background: transparent;
+          min-height: 80vh;
+          display: flex;
+          align-items: center;
+        }
+        
+        .container {
+          width: 100%;
+          position: relative;
+          z-index: 2;
         }
 
         .about-grid-main {
@@ -88,6 +98,13 @@ export default function AboutSection() {
           grid-template-columns: 1fr 1fr;
           gap: 4rem;
           align-items: center;
+          width: 100%;
+        }
+        
+        @media (max-width: 992px) {
+          .about-grid-main {
+            grid-template-columns: 1fr;
+          }
         }
 
         .section-header-top {
@@ -110,27 +127,9 @@ export default function AboutSection() {
           border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
-        .about-image-wrapper {
-          position: relative;
-        }
 
-        .about-image {
-          width: 100%;
-          height: auto;
-          display: block;
-          transition: transform 0.5s ease;
-        }
 
-        .about-image-wrapper:hover .about-image {
-          transform: scale(1.05);
-        }
 
-        .image-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(to top right, var(--bg-alpha-light), transparent);
-          pointer-events: none;
-        }
 
         .features-list {
           display: flex;
@@ -165,15 +164,6 @@ export default function AboutSection() {
           color: var(--text-muted);
           font-size: 0.95rem;
           line-height: 1.5;
-        }
-
-        @media (max-width: 1024px) {
-          .about-grid-main {
-            grid-template-columns: 1fr;
-          }
-          .about-image-wrapper {
-            order: -1;
-          }
         }
       `}</style>
     </section>

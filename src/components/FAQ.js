@@ -9,7 +9,7 @@ export default function FAQ() {
 
   const faqs = [
     {
-      q: "Can Oryol ERP handle multi-branch operations?",
+      q: "Can MerlinFlow ERP handle multi-branch operations?",
       a: "Yes. Our enterprise plan is specifically designed for multi-location businesses, allowing you to manage multiple school campuses, hotel chains, or clinic branches from a single unified dashboard."
     },
     {
@@ -18,11 +18,11 @@ export default function FAQ() {
     },
     {
       q: "Do you offer custom API integrations?",
-      a: "Absolutely. Oryol ERP features a robust RESTful API. Our engineering team can work with your IT department to build custom connectors for legacy systems or specialized hardware."
+      a: "Absolutely. MerlinFlow ERP features a robust RESTful API. Our engineering team can work with your IT department to build custom connectors for legacy systems or specialized hardware."
     },
     {
       q: "Is the platform mobile-friendly?",
-      a: "Yes. Oryol ERP is fully responsive and accessible via any web browser. We also provide dedicated native iOS and Android apps for field staff, parents (Education), and patients (Healthcare)."
+      a: "Yes. MerlinFlow ERP is fully responsive and accessible via any web browser. We also provide dedicated native iOS and Android apps for field staff, parents (Education), and patients (Healthcare)."
     },
     {
       q: "What happens if we outgrow our current plan?",
@@ -125,7 +125,7 @@ export default function FAQ() {
           padding: 1.5rem 2rem;
           background: transparent;
           border: none;
-          color: white;
+          color: var(--text-color);
           font-size: 1.1rem;
           font-weight: 600;
           text-align: left;
