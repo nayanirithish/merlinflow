@@ -54,7 +54,8 @@ export default function Navbar() {
               style={{ 
                 width: 'auto', 
                 objectFit: 'contain',
-                transform: 'scale(1.3)'
+                transform: 'scale(1.3)',
+                transformOrigin: 'left center'
               }}
               priority
             />
