@@ -224,6 +224,7 @@ export default function PricingSection() {
           flex-direction: column;
           backdrop-filter: blur(12px);
           transition: background 0.3s ease;
+          height: 100%;
         }
 
         .pricing-card.popular {

@@ -148,6 +148,7 @@ export default function ProductsOverview() {
           border-radius: 16px;
           border: 1px solid #cbd5e1;
           box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+          height: 100%;
         }
 
         .prod-header {

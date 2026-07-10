@@ -150,6 +150,7 @@ export default function WhyMerlinFlow() {
           background: var(--glass-bg);
           backdrop-filter: blur(12px);
           border-radius: 20px;
+          height: 100%;
         }
 
         .advantage-card:hover {

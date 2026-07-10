@@ -172,6 +172,7 @@ export default function IndustryFeatures() {
           flex-direction: column;
           align-items: center;
           text-align: center;
+          height: 100%;
         }
 
         .feature-card:hover {

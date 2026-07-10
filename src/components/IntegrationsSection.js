@@ -127,6 +127,7 @@ export default function IntegrationsSection() {
           text-align: center;
           transition: all 0.3s;
           cursor: pointer;
+          height: 100%;
         }
 
         .integration-card:hover {
