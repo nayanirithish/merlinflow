@@ -25,12 +25,12 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.8, ease: "backOut" }}
             style={{ marginBottom: "2rem", display: "inline-block" }}
           >
-            <span className="glass-panel" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem", fontWeight: 500, letterSpacing: "1px", textTransform: "uppercase", color: "var(--primary)" }}>
+            <span className="glass-panel" style={{ display: "inline-block", padding: "0.5rem 1rem", fontSize: "0.875rem", fontWeight: 500, letterSpacing: "1px", textTransform: "uppercase", color: "var(--primary)", lineHeight: "1.5" }}>
               Introducing MerlinFlow Technologies
             </span>
           </motion.div>
 
-          <h1 style={{ fontSize: "clamp(2.5rem, 4vw, 4rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: "1.5rem" }}>
+          <h1 style={{ fontSize: "clamp(2.5rem, 4vw, 4rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: "1.5rem", wordBreak: "break-word" }}>
             Innovation at <span className="text-gradient">every step.</span>
           </h1>
 
@@ -264,6 +264,7 @@ export default function Hero() {
           gap: 1.5rem;
           justify-content: center;
           align-items: center;
+          flex-wrap: wrap;
         }
         
         .hero-container::before {
