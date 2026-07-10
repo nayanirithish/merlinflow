@@ -192,6 +192,12 @@ export default function WhyMerlinFlow() {
           .advantages-grid {
             grid-template-columns: 1fr;
           }
+          
+          .advantage-card {
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+          }
         }
       `}</style>
     </section>

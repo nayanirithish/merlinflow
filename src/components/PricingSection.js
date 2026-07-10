@@ -379,6 +379,25 @@ export default function PricingSection() {
             grid-template-columns: 1fr;
             max-width: 450px;
           }
+          
+          .pricing-card {
+            align-items: center;
+            text-align: center;
+          }
+          
+          .pricing-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .pricing-features {
+            align-items: center;
+          }
+          
+          .feature-item {
+            justify-content: center;
+          }
         }
       `}</style>
     </section>

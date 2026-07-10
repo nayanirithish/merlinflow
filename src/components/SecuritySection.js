@@ -169,6 +169,18 @@ export default function SecuritySection() {
           .features-grid {
             grid-template-columns: 1fr;
           }
+          
+          .sec-feature {
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+          }
+          
+          .sec-header {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+          }
         }
       `}</style>
     </section>

@@ -219,6 +219,26 @@ export default function ProductsOverview() {
           .products-grid {
             grid-template-columns: 1fr;
           }
+          
+          .prod-card {
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+          }
+          
+          .prod-header {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .prod-title-group {
+            align-items: center;
+          }
+          
+          .prod-desc {
+            text-align: center;
+          }
         }
       `}</style>
     </section>
