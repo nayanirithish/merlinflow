@@ -133,6 +133,7 @@ export default function ProductsOverview() {
         .products-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: 1fr;
           gap: 2rem;
           max-width: 1200px;
           margin: 0 auto;

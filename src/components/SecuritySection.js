@@ -91,6 +91,7 @@ export default function SecuritySection() {
         .features-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: 1fr;
           gap: 1.5rem;
           max-width: 1200px;
           margin: 0 auto;

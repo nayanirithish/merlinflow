@@ -162,6 +162,7 @@ export default function IndustryFeatures() {
         .features-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: 1fr;
           gap: 2rem;
         }
 
