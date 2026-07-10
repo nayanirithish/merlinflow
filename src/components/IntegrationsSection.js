@@ -189,6 +189,14 @@ export default function IntegrationsSection() {
         @media (max-width: 640px) {
           .integrations-grid {
             grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+            margin: 0 auto;
+            justify-content: center;
+          }
+          
+          .integration-card {
+            min-height: 180px;
+            width: 100%;
           }
         }
       `}</style>
