@@ -311,6 +311,10 @@ export default function Hero() {
         }
 
         .btn-primary {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
           background: var(--primary);
           color: #ffffff;
           border: none;
@@ -330,6 +334,10 @@ export default function Hero() {
         }
 
         .btn-secondary {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
           background: transparent;
           color: var(--text-color);
           border: 1px solid var(--glass-border);
@@ -364,19 +372,19 @@ export default function Hero() {
 
         @media (max-width: 1024px) {
           .hero-grid, .hero-grid.demo-active {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr !important;
             text-align: center;
           }
           .hero-grid.demo-active .hero-buttons {
             justify-content: center;
           }
           .hero-buttons {
-            flex-direction: column;
-            width: 100%;
-            gap: 1rem;
+            flex-direction: column !important;
+            width: 100% !important;
+            gap: 1rem !important;
           }
           .btn-primary, .btn-secondary {
-            width: 100%;
+            width: 100% !important;
             max-width: 300px;
           }
           .hero-text-content {
