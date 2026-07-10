@@ -311,7 +311,7 @@ export default function Hero() {
         }
 
         .btn-primary {
-          display: flex;
+          display: inline-flex;
           justify-content: center;
           align-items: center;
           text-align: center;
@@ -334,7 +334,7 @@ export default function Hero() {
         }
 
         .btn-secondary {
-          display: flex;
+          display: inline-flex;
           justify-content: center;
           align-items: center;
           text-align: center;
