@@ -314,7 +314,7 @@ a, button, .glass-panel, .nav-link, .plan-btn {
 
         .a11y-panel {
           width: 380px;
-          max-width: calc(100vw - 2rem);
+          max-width: calc(100vw - 1rem);
           height: 80vh;
           max-height: 700px;
           background: white;
@@ -323,6 +323,13 @@ a, button, .glass-panel, .nav-link, .plan-btn {
           display: flex;
           flex-direction: column;
           overflow: hidden;
+          font-size: 14px;
+        }
+
+        @media (max-width: 576px) {
+          .a11y-panel {
+            height: 55vh;
+          }
         }
 
         .a11y-header {
@@ -335,6 +342,8 @@ a, button, .glass-panel, .nav-link, .plan-btn {
           display: flex;
           justify-content: space-between;
           margin-bottom: 1rem;
+          gap: 0.5rem;
+          flex-wrap: wrap;
         }
 
         .header-btn {
@@ -344,9 +353,9 @@ a, button, .glass-panel, .nav-link, .plan-btn {
           background: white;
           color: #2563eb;
           border: none;
-          padding: 0.4rem 0.8rem;
+          padding: 6px 10px;
           border-radius: 20px;
-          font-size: 0.8rem;
+          font-size: 12px;
           font-weight: 600;
           cursor: pointer;
         }
@@ -386,7 +395,7 @@ a, button, .glass-panel, .nav-link, .plan-btn {
         }
 
         .section-title {
-          font-size: 1.1rem;
+          font-size: 16px;
           color: #333;
           margin-bottom: 1rem;
           font-weight: 600;
@@ -412,8 +421,8 @@ a, button, .glass-panel, .nav-link, .plan-btn {
           color: #475569;
         }
 
-        .profile-text h4 { margin: 0; font-size: 1rem; color: #1e293b; }
-        .profile-text p { margin: 0; font-size: 0.8rem; color: #64748b; }
+        .profile-text h4 { margin: 0; font-size: 14px; color: #1e293b; }
+        .profile-text p { margin: 0; font-size: 12px; color: #64748b; line-height: 1.4; }
 
         .toggle-switch {
           display: flex;
@@ -477,7 +486,7 @@ a, button, .glass-panel, .nav-link, .plan-btn {
         .adj-card:hover { background: #f1f5f9; }
         .adj-card.active { border-color: #2563eb; background: #eff6ff; color: #2563eb; }
 
-        .adj-label { font-size: 0.85rem; font-weight: 600; color: #475569; }
+        .adj-label { font-size: 12px; font-weight: 600; color: #475569; }
         .adj-card.active .adj-label { color: #2563eb; }
 
         .adj-control {
@@ -547,8 +556,8 @@ a, button, .glass-panel, .nav-link, .plan-btn {
           background: #2563eb;
           color: white;
           text-align: center;
-          padding: 1rem;
-          font-size: 0.85rem;
+          padding: 12px;
+          font-size: 12px;
           font-weight: 600;
         }
       
