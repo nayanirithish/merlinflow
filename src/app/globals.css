@@ -324,14 +324,17 @@ a, button, .glass-panel, .nav-link, .plan-btn {
           flex-direction: column;
           overflow: hidden;
           font-size: 14px;
+          -webkit-text-size-adjust: none;
+          text-size-adjust: none;
         }
 
         @media (max-width: 576px) {
           .a11y-panel {
             position: fixed;
             bottom: 1rem;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
             width: 92vw;
             max-width: 400px;
             height: 50vh;
