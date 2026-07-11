@@ -99,9 +99,10 @@ export default function ProductsOverview() {
 
       <style jsx global>{`
         .products-section {
-          padding: 6rem 2rem;
+          padding: 6rem 0;
           background: transparent;
           position: relative;
+          overflow: hidden;
         }
 
         .section-header-top {
@@ -240,6 +241,13 @@ export default function ProductsOverview() {
           
           .prod-desc {
             text-align: center;
+          }
+          
+          :global(.prod-btn) {
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 0.8rem 1rem;
+            white-space: normal;
           }
         }
       `}</style>
