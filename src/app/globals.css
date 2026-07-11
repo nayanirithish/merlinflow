@@ -328,7 +328,14 @@ a, button, .glass-panel, .nav-link, .plan-btn {
 
         @media (max-width: 576px) {
           .a11y-panel {
-            height: 55vh;
+            position: fixed;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 92vw;
+            max-width: 400px;
+            height: 50vh;
+            z-index: 10000;
           }
         }
 
