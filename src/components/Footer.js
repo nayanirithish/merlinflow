@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand Column */}
           <div className="footer-brand">
-            <div className="footer-logo" style={{ marginBottom: "-1rem" }}>
+            <div className="footer-logo" style={{ marginBottom: "-1rem", marginLeft: "-1rem" }}>
               <img
                 src={merlinflowLogo.src}
                 alt="MerlinFlow Logo"
@@ -82,8 +82,8 @@ export default function Footer() {
         .footer {
           border-top: 1px solid var(--glass-border);
           background: var(--bg-alpha-light);
-          padding: 6rem 0 2rem;
-          margin-top: 4rem;
+          padding: 3rem 0 2rem;
+          margin-top: 1.5rem;
         }
 
         .footer-grid {
@@ -161,6 +161,10 @@ export default function Footer() {
         }
 
         @media (max-width: 576px) {
+          .footer {
+            padding: 2rem 0 1rem;
+            margin-top: 1rem;
+          }
           .footer-grid {
             grid-template-columns: 1fr;
             gap: 2rem;
