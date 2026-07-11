@@ -303,11 +303,10 @@ a, button, .glass-panel, .nav-link, .plan-btn {
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: background 0.3s, box-shadow 0.3s, border 0.3s;
         }
 
         .a11y-trigger:hover {
-          transform: translateY(-4px) scale(1.05);
           background: rgba(11, 92, 255, 0.25);
           border: 1px solid rgba(11, 92, 255, 0.5);
           box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
@@ -315,6 +314,7 @@ a, button, .glass-panel, .nav-link, .plan-btn {
 
         .a11y-panel {
           width: 380px;
+          max-width: calc(100vw - 2rem);
           height: 80vh;
           max-height: 700px;
           background: white;

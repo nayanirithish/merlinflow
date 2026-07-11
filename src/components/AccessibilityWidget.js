@@ -284,6 +284,7 @@ export default function AccessibilityWidget() {
           drag
           dragMomentum={false}
           whileDrag={{ scale: 1.1 }}
+          whileHover={{ scale: 1.05, y: -4 }}
           style={{ touchAction: "none" }}
         >
           <Accessibility size={32} strokeWidth={2.5} color="white" />
