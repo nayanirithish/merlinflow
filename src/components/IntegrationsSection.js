@@ -22,8 +22,8 @@ export default function IntegrationsSection() {
         <div className="layout-grid">
           
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
             className="text-content"
@@ -68,9 +68,10 @@ export default function IntegrationsSection() {
 
       <style jsx global>{`
         .integrations-section {
-          padding: 4rem 2rem;
+          padding: 4rem 0;
           background: transparent;
           position: relative;
+          overflow: hidden;
         }
 
         .layout-grid {
