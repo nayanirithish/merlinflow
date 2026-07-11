@@ -26,6 +26,7 @@ export default function Footer() {
                 style={{
                   height: '180px',
                   width: 'auto',
+                  maxWidth: '100%',
                   objectFit: 'contain'
                 }}
               />

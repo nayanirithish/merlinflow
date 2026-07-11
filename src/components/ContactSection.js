@@ -93,7 +93,7 @@ export default function ContactSection() {
 
         {/* Right Column */}
         <div className="contact-right">
-          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="form-card">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="form-card">
             
             {isSubmitted ? (
                <div className="success-state">
@@ -181,11 +181,12 @@ export default function ContactSection() {
 
       <style jsx global>{`
         .contact-new-section {
-          padding: 6rem 2rem;
+          padding: 6rem 0;
           background: #fafafa;
           min-height: 100vh;
           display: flex;
           align-items: center;
+          overflow: hidden;
         }
 
         .contact-container {
@@ -524,6 +525,12 @@ export default function ContactSection() {
         }
         
         @media (max-width: 600px) {
+          .contact-new-section {
+            padding: 4rem 0;
+          }
+          .form-card {
+            padding: 1.5rem;
+          }
           .input-row {
             grid-template-columns: 1fr;
           }

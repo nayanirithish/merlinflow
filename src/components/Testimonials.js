@@ -209,9 +209,10 @@ export default function Testimonials() {
 
       <style jsx global>{`
         .testimonials-section {
-          padding: 3rem 2rem;
+          padding: 3rem 0;
           background: transparent;
           position: relative;
+          overflow: hidden;
         }
 
         .section-header {

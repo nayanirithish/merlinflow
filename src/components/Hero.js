@@ -394,6 +394,12 @@ export default function Hero() {
             width: 100%;
           }
         }
+
+        @media (max-width: 600px) {
+          .demo-options-grid {
+            grid-template-columns: 1fr;
+          }
+        }
       `}</style>
     </div>
   );

@@ -82,10 +82,10 @@ export default function PricingSection() {
   // Unique entrance animations for each card based on index
   const getCardAnimation = (index) => {
     switch(index) {
-      case 0: return { initial: { opacity: 0, x: -50 }, whileInView: { opacity: 1, x: 0 } };
-      case 1: return { initial: { opacity: 0, y: 50, scale: 0.9 }, whileInView: { opacity: 1, y: 0, scale: 1 } };
-      case 2: return { initial: { opacity: 0, y: -50, scale: 0.9 }, whileInView: { opacity: 1, y: 0, scale: 1 } };
-      case 3: return { initial: { opacity: 0, x: 50 }, whileInView: { opacity: 1, x: 0 } };
+      case 0: return { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 } };
+      case 1: return { initial: { opacity: 0, y: 30, scale: 0.9 }, whileInView: { opacity: 1, y: 0, scale: 1 } };
+      case 2: return { initial: { opacity: 0, y: 30, scale: 0.9 }, whileInView: { opacity: 1, y: 0, scale: 1 } };
+      case 3: return { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 } };
       default: return { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 } };
     }
   };
@@ -174,7 +174,7 @@ export default function PricingSection() {
 
       <style jsx global>{`
         .pricing-section {
-          padding: 6rem 2rem;
+          padding: 6rem 0;
           background: transparent;
           border-bottom: 1px solid var(--glass-border);
           overflow: hidden; /* Ensure animations don't cause scrollbars */
