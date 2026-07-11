@@ -201,6 +201,8 @@ export default function IndustryFeatures() {
         .feature-desc {
           color: var(--text-muted);
           line-height: 1.6;
+          min-height: 50px;
+          height: auto;
         }
         @media (max-width: 1024px) {
           .features-grid {

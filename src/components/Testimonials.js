@@ -260,7 +260,7 @@ export default function Testimonials() {
         }
 
         .testimonial-card {
-          flex: 0 0 350px;
+          flex: 0 0 min(350px, 85vw);
           scroll-snap-align: center;
           padding: 1.5rem;
           position: relative;

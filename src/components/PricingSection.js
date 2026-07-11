@@ -249,7 +249,9 @@ export default function PricingSection() {
           letter-spacing: 1px;
           text-transform: uppercase;
           box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
-          white-space: nowrap;
+          width: 90%;
+          max-width: 200px;
+          text-align: center;
         }
 
         .pricing-header {
@@ -280,7 +282,8 @@ export default function PricingSection() {
           font-size: 0.95rem;
           line-height: 1.5;
           margin-bottom: 1.5rem;
-          height: 60px;
+          min-height: 60px;
+          height: auto;
         }
 
         .price-tag {
