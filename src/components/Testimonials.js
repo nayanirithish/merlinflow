@@ -241,6 +241,8 @@ export default function Testimonials() {
           scroll-behavior: smooth;
           scroll-snap-type: x mandatory;
           -webkit-overflow-scrolling: touch;
+          width: 100%;
+          max-width: 100%;
         }
         
         .testimonials-grid::-webkit-scrollbar {

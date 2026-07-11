@@ -160,6 +160,12 @@ a, button, .glass-panel, .nav-link, .plan-btn {
   padding: 0 2rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 /* Accessibility overrides */
 .high-contrast {
   --bg-color: #000000;

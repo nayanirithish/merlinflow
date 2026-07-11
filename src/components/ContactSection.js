@@ -253,6 +253,7 @@ export default function ContactSection() {
           color: #1a1a1a;
           font-weight: 500;
           text-decoration: none;
+          word-break: break-all;
         }
 
         .faq-divider {
@@ -517,6 +518,33 @@ export default function ContactSection() {
           .contact-container {
             grid-template-columns: 1fr;
             gap: 4rem;
+          }
+          
+          .contact-left {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .contact-pills {
+            align-items: center;
+            width: 100%;
+            max-width: 450px;
+          }
+          
+          .contact-pill {
+            width: 100%;
+            justify-content: center;
+          }
+          
+          .faq-list {
+            width: 100%;
+            max-width: 500px;
+          }
+          
+          .faq-q {
+            text-align: left;
           }
           
           .form-card {
