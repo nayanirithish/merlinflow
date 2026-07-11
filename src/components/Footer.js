@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand Column */}
           <div className="footer-brand">
-            <div className="footer-logo" style={{ marginBottom: "1rem" }}>
+            <div className="footer-logo" style={{ marginBottom: "-1rem" }}>
               <img
                 src={merlinflowLogo.src}
                 alt="MerlinFlow Logo"
@@ -27,11 +27,12 @@ export default function Footer() {
                   height: 'auto',
                   width: '100%',
                   maxWidth: '260px',
-                  objectFit: 'contain'
+                  objectFit: 'contain',
+                  display: 'block'
                 }}
               />
             </div>
-            <p style={{ color: "var(--text-muted)", marginBottom: "2rem", maxWidth: "400px", lineHeight: "1.6" }}>
+            <p style={{ color: "var(--text-muted)", marginBottom: "2rem", marginTop: "-1rem", maxWidth: "400px", lineHeight: "1.6" }}>
               The Operating System for modern Educational Institutions and Enterprises. Unify your workflows, automate complex processes, and unlock unprecedented growth with our state-of-the-art, secure SaaS platform.
             </p>
           </div>
